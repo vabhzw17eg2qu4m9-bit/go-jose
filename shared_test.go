@@ -1,7 +1,7 @@
 package jose
 
 import (
-	"github.com/vabhzw17eg2qu4m9-bit/go-jose/v3/json"
+	"github.com/go-jose/go-jose/v3/json"
 )
 
 // getJWK extracts parsed "jwk" from the raw JSON.

@@ -33,8 +33,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/vabhzw17eg2qu4m9-bit/go-jose/v3"
-	"github.com/vabhzw17eg2qu4m9-bit/go-jose/v3/json"
+	"github.com/go-jose/go-jose/v3"
+	"github.com/go-jose/go-jose/v3/json"
 )
 
 type testClaims struct {

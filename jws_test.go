@@ -22,8 +22,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/go-jose/go-jose/v3/json"
 	"github.com/stretchr/testify/assert"
-	"github.com/vabhzw17eg2qu4m9-bit/go-jose/v3/json"
 )
 
 const trustedCA = `

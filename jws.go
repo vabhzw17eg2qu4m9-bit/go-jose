@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/go-jose/go-jose/v3/json"
+	"github.com/vabhzw17eg2qu4m9-bit/go-jose/v3/json"
 )
 
 // rawJSONWebSignature represents a raw JWS JSON object. Used for parsing/serializing.
@@ -235,6 +235,8 @@ func (parsed *rawJSONWebSignature) sanitized() (*JSONWebSignature, error) {
 			return nil, ErrUnprotectedNonce
 		}
 
+		obj.Signatures[i].header = sig.Header
+
 		var err error
 		obj.Signatures[i].Header, err = obj.Signatures[i].mergedHeaders().sanitized()
 		if err != nil {
@@ -266,7 +268,6 @@ func (parsed *rawJSONWebSignature) sanitized() (*JSONWebSignature, error) {
 		// Copy value of sig
 		original := sig
 
-		obj.Signatures[i].header = sig.Header
 		obj.Signatures[i].original = &original
 	}
 

@@ -30,7 +30,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/go-jose/go-jose/v3"
+	"github.com/vabhzw17eg2qu4m9-bit/go-jose/v3"
 )
 
 func TestRoundtripsJWSCryptoSigner(t *testing.T) {
